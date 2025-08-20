@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch Chiếu Phim - MovieBox</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/schedules.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../libs/fontawesome-free-7.0.0-web/css/all.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<main>
+  <section class="page-header" style="background-image: url('../assets/image/tix-banner-brighter.png');">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html" class="breadcrumb-link">Trang Chủ</a>
+        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+        <span class="breadcrumb-current">Lịch Chiếu</span>
+      </div>
+      <h1>Lịch Chiếu Phim</h1>
+      <p>Chọn suất chiếu và rạp phim yêu thích của bạn</p>
+    </div>
+  </section>
+  <section class="schedules-page-section container">
+    <div class="schedule-filter-bar">
+      <div class="date-picker">
+        <button class="date-item active">
+          <span class="day-of-week">Hôm nay</span>
+          <span class="date">15/07</span>
+        </button>
+        <button class="date-item">
+          <span class="day-of-week">Thứ 3</span>
+          <span class="date">16/07</span>
+        </button>
+        <button class="date-item">
+          <span class="day-of-week">Thứ 4</span>
+          <span class="date">17/07</span>
+        </button>
+        <button class="date-item">
+          <span class="day-of-week">Thứ 5</span>
+          <span class="date">18/07</span>
+        </button>
+        <button class="date-item">
+          <span class="day-of-week">Thứ 6</span>
+          <span class="date">19/07</span>
+        </button>
+        <button class="date-item">
+          <span class="day-of-week">Thứ 7</span>
+          <span class="date">20/07</span>
+        </button>
+      </div>
+      <div class="dropdown-filters">
+        <select id="filter-movie">
+          <option value="all">Chọn Phim</option>
+          <option value="lat-mat-7">Lật Mặt 7: Một Điều Ước</option>
+          <option value="gap-lai-chi-bau">Gặp Lại Chị Bầu</option>
+          <option value="tran-chien-cuoi-cung">Trận Chiến Cuối Cùng</option>
+        </select>
+        <select id="filter-cinema">
+          <option value="all">Chọn Rạp</option>
+          <option value="hbt">MovieBox Hai Bà Trưng</option>
+          <option value="cg">MovieBox Cầu Giấy</option>
+          <option value="btl">MovieBox Bắc Từ Liêm</option>
+        </select>
+      </div>
+    </div>
+    <div class="schedules-list">
+      <div class="schedule-movie-entry" data-movie="lat-mat-7">
+        <div class="movie-info-col">
+          <img src="https://www.cgv.vn/media/catalog/product/cache/1/image/1800x/71252117777b696995f01934522c402d/l/a/lat_mat_7_-_poster_23.03.2024.jpg" alt="Lật Mặt 7">
+          <div class="movie-details">
+            <h3>Lật Mặt 7: Một Điều Ước</h3>
+            <p><span class="tag-rating">C16</span> Hành Động, Gia Đình</p>
+            <p><i class="fas fa-clock"></i> 138 phút</p>
+          </div>
+        </div>
+        <div class="showtimes-col">
+          <div class="cinema-showtimes" data-cinema="hbt">
+            <h4><i class="fas fa-map-marker-alt"></i> MovieBox Hai Bà Trưng</h4>
+            <div class="times">
+              <a href="#" class="time-slot">18:30</a>
+              <a href="#" class="time-slot">19:45</a>
+              <a href="#" class="time-slot">20:50</a>
+              <a href="#" class="time-slot">22:15</a>
+            </div>
+          </div>
+          <div class="cinema-showtimes" data-cinema="btl">
+            <h4><i class="fas fa-map-marker-alt"></i> MovieBox Bắc Từ Liêm</h4>
+            <div class="times">
+              <a href="#" class="time-slot">19:00</a>
+              <a href="#" class="time-slot">21:30</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Movie Entry 2 -->
+      <div class="schedule-movie-entry" data-movie="gap-lai-chi-bau">
+        <div class="movie-info-col">
+          <img src="https://image.tmdb.org/t/p/original/t9r4e1n41s9S4pY2S4yTUe3YgX.jpg" alt="Gặp Lại Chị Bầu">
+          <div class="movie-details">
+            <h3>Gặp Lại Chị Bầu</h3>
+            <p><span class="tag-rating">C13</span> Tình Cảm, Hài</p>
+            <p><i class="fas fa-clock"></i> 110 phút</p>
+          </div>
+        </div>
+        <div class="showtimes-col">
+          <!-- Cinema 1 -->
+          <div class="cinema-showtimes" data-cinema="cg">
+            <h4><i class="fas fa-map-marker-alt"></i> MovieBox Cầu Giấy</h4>
+            <div class="times">
+              <a href="#" class="time-slot">18:00</a>
+              <a href="#" class="time-slot">20:10</a>
+              <a href="#" class="time-slot">22:20</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Movie Entry 3 -->
+      <div class="schedule-movie-entry" data-movie="tran-chien-cuoi-cung">
+        <div class="movie-info-col">
+          <img src="https://cdn.moveek.com/storage/media/cache/short/68183ba4c70b2014190582.jpg" alt="Trận Chiến Cuối Cùng">
+          <div class="movie-details">
+            <h3>Trận Chiến Cuối Cùng</h3>
+            <p><span class="tag-rating">C18</span> Hành Động</p>
+            <p><i class="fas fa-clock"></i> 125 phút</p>
+          </div>
+        </div>
+        <div class="showtimes-col">
+          <!-- Cinema 1 -->
+          <div class="cinema-showtimes" data-cinema="hbt">
+            <h4><i class="fas fa-map-marker-alt"></i> MovieBox Hai Bà Trưng</h4>
+            <div class="times">
+              <a href="#" class="time-slot">21:00</a>
+            </div>
+          </div>
+          <!-- Cinema 2 -->
+          <div class="cinema-showtimes" data-cinema="cg">
+            <h4><i class="fas fa-map-marker-alt"></i> MovieBox Cầu Giấy</h4>
+            <div class="times">
+              <a href="#" class="time-slot">22:00</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<!-- Scripts -->
+<script>
+  // Tải Header và Footer
+  fetch('header.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.textContent.trim() === 'Lịch Chiếu') {
+                link.classList.add('active');
+              }
+            });
+          });
+
+  fetch('footer.html')
+          .then(res => res.text())
+          .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+
+<!-- schedules.html -->
+<script>
+  // Logic Lọc Lịch Chiếu (ĐÃ NÂNG CẤP TOÀN DIỆN)
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterMovie = document.getElementById('filter-movie');
+    const filterCinema = document.getElementById('filter-cinema');
+    const movieEntries = document.querySelectorAll('.schedule-movie-entry');
+    const dateItems = document.querySelectorAll('.date-item');
+
+    function applyFilters() {
+      // Lấy giá trị đang được chọn từ dropdown
+      const selectedMovie = filterMovie.value;
+      const selectedCinema = filterCinema.value;
+
+      movieEntries.forEach(movieEntry => {
+        const movieMatches = (selectedMovie === 'all') || (movieEntry.dataset.movie === selectedMovie);
+
+        // Mặc định ẩn tất cả các suất chiếu của rạp trong một phim
+        const cinemaShowtimes = movieEntry.querySelectorAll('.cinema-showtimes');
+        let hasVisibleCinema = false;
+
+        cinemaShowtimes.forEach(cinema => {
+          const cinemaMatches = (selectedCinema === 'all') || (cinema.dataset.cinema === selectedCinema);
+          if (cinemaMatches) {
+            cinema.style.display = 'block';
+            hasVisibleCinema = true; // Đánh dấu là có ít nhất 1 rạp hiển thị
+          } else {
+            cinema.style.display = 'none';
+          }
+        });
+
+        // Chỉ hiện entry phim nếu nó khớp bộ lọc phim VÀ có ít nhất một rạp khớp bộ lọc rạp
+        if (movieMatches && hasVisibleCinema) {
+          movieEntry.style.display = 'flex';
+        } else {
+          movieEntry.style.display = 'none';
+        }
+      });
+    }
+
+    // Gán sự kiện 'change' cho các dropdown
+    filterMovie.addEventListener('change', applyFilters);
+    filterCinema.addEventListener('change', applyFilters);
+
+    // Logic cho Date Picker (giữ nguyên)
+    dateItems.forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelector('.date-item.active').classList.remove('active');
+        item.classList.add('active');
+      });
+    });
+
+    // --- BẮT ĐẦU PHẦN LOGIC MỚI: Đọc tham số URL ---
+    const urlParams = new URLSearchParams(window.location.search);
+    const movieParam = urlParams.get('movie');
+    const cinemaParam = urlParams.get('cinema');
+
+    // Nếu có tham số 'movie' trên URL, tự động chọn nó trong dropdown
+    if (movieParam) {
+      filterMovie.value = movieParam;
+    }
+
+    // Nếu có tham số 'cinema' trên URL, tự động chọn nó trong dropdown
+    if (cinemaParam) {
+      filterCinema.value = cinemaParam;
+    }
+
+    // Sau khi đã thiết lập giá trị từ URL, gọi hàm lọc để cập nhật giao diện
+    applyFilters();
+    // --- KẾT THÚC PHẦN LOGIC MỚI ---
+  });
+</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

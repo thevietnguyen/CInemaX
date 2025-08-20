@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieBox</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./libs/fontawesome-free-7.0.0-web/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"> -->
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-slider">
+                <!-- Slide 1 -->
+                <div class="hero-slide active"
+                    style="background-image: url('https://i0.wp.com/teaser-trailer.com/wp-content/uploads/2019/01/Polar-new-banner.jpg?ssl=1');">
+                    <div class="hero-content">
+                        <h1>Avengers: Kỷ Nguyên Mới</h1>
+                        <p>Các anh hùng hợp nhất chống lại một mối đe dọa toàn cầu mới.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide"
+                    style="background-image: url('https://i.ytimg.com/vi/hTCfn_Bq-B0/maxresdefault.jpg');">
+                    <div class="hero-content">
+                        <h1>Chiến Binh Dải Ngân Hà</h1>
+                        <p>Dấn thân vào một cuộc phiêu lưu vũ trụ ngoài sức tưởng tượng.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hero-slide"
+                    style="background-image: url('https://collider.com/wp-content/uploads/inception_movie_poster_banner_02.jpg');">
+                    <div class="hero-content">
+                        <h1>Thám Tử Bóng Đêm</h1>
+                        <p>Một câu chuyện tội phạm gai góc trong bóng tối của thành phố.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-buttons-fixed">
+                <button class="btn btn-primary"><i class="fas fa-ticket-alt"></i> Đặt Vé Ngay</button>
+                <button class="btn btn-secondary"><i class="fas fa-play"></i> Xem Trailer</button>
+            </div>
+
+            <!-- Dots -->
+            <div class="hero-slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </section>
+
+        <section class="now-showing container">
+            <div class="section-header">
+                <h2>Đang Chiếu</h2>
+                <a href="./pages/movies.html?status=NOW_SHOWING" class="view-all">Xem Tất Cả</a>
+            </div>
+            <div id="now-showing-grid" class="movie-grid-now-showing">
+            </div>
+        </section>
+
+        <section class="coming-soon container">
+            <div class="section-header">
+                <h2>Sắp Chiếu</h2>
+                <a href="./pages/movies.html?status=COMING_SOON" class="view-all">Xem Tất Cả</a>
+            </div>
+
+            <div id="coming-soon-carousel" class="movie-carousel">
+            </div>
+        </section>
+
+        <section class="promotion-banner">
+            <div class="container">
+                <div class="promo-layout">
+                    <div class="promo-content">
+                        <h2>Ưu Đãi Đặc Biệt Thứ Ba!</h2>
+                        <p>Giảm 50% giá vé cho tất cả các suất chiếu vào mỗi Thứ Ba. Đừng bỏ lỡ những ưu đãi tuyệt vời
+                            nhất!</p>
+                        <button class="btn btn-primary">Tìm Hiểu Thêm <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <div class="promo-image">
+                        <img src="./assets/image/khuyen_mai.png" alt="Quảng cáo bắp nước và vé">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="movie-news container">
+            <div class="section-header">
+                <h2>Tin Tức Điện Ảnh</h2>
+                <a href="./pages/news.html" class="view-all">Xem Tất Cả</a>
+            </div>
+
+            <div class="movie-grid-news">
+                <!-- Tin tức hiển thị -->
+                <div class="movie-card-horizontal">
+                    <img src="https://cdn.moveek.com/storage/media/cache/small/684bf5787416c665569932.jpg"
+                        alt="Ảnh tin tức">
+                    <div class="movie-info">
+                        <h3>Phần Tiếp Theo Của Bom Tấn Được Công Bố</h3>
+                        <p>Hãng phim đã chính thức công bố phần tiếp theo với sự trở lại của...</p>
+                        <button class="btn btn-dark">Đọc Thêm</button>
+                    </div>
+                </div>
+                <div class="movie-card-horizontal">
+                    <img src="https://cdn.moveek.com/storage/media/cache/small/68463fe674691421724407.png"
+                        alt="Ảnh tin tức">
+                    <div class="movie-info">
+                        <h3>Hậu Trường: Chiến Binh Dải Ngân Hà</h3>
+                        <p>Hãy cùng xem hậu trường thực hiện bộ phim được mong đợi nhất...</p>
+                        <button class="btn btn-dark">Đọc Thêm</button>
+                    </div>
+                </div>
+                <div class="movie-card-horizontal">
+                    <img src="https://cdn.moveek.com/storage/media/cache/small/684581acd4494328478780.jpg"
+                        alt="Ảnh tin tức">
+                    <div class="movie-info">
+                        <h3>Đạo Diễn Tiết Lộ Dự Án Khoa Học Viễn Tưởng Mới</h3>
+                        <p>Đạo diễn nổi tiếng hé lộ về bộ phim khoa học viễn tưởng tiếp theo của mình.</p>
+                        <button class="btn btn-dark">Đọc Thêm</button>
+                    </div>
+                </div>
+            </div>
+            <!-- <div style="text-align: center; margin-top: 25px;">
+            <a id="toggle-news" class="view-all" style="cursor: pointer;">▼ Xem Thêm</a>
+        </div> -->
+        </section>
+
+        <section class="our-cinemas-enhanced container">
+            <div class="section-header">
+                <h2>Các Rạp Của Chúng Tôi</h2>
+                <a href="./pages/cinemas.html" class="view-all">Xem Tất Cả Rạp</a>
+            </div>
+            <div class="cinemas-layout">
+                <div class="cinemas-list">
+                    <!-- Rạp 1 -->
+                    <div class="cinema-item active"
+                        data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.447689498266!2d106.7001920750431!3d10.77699998937189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f495b597837%3A0x93361a6665e71415!2zTmjDoCBow6F0IFRow6BuaCBwaOG7kSAoU-G6o2kgR8OybiBPcGVyYSBIb3VzZSk!5e0!3m2!1svi!2s!4v1689674682025!5m2!1svi!2s">
+                        <h4>MovieBox Hai Bà Trưng</h4>
+                        <p>123 Minh Khai</p>
+                    </div>
+                    <!-- Rạp 2 -->
+                    <div class="cinema-item"
+                        data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1246294713735!2d106.7494396750434!3d10.801648489348184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752677b9496669%3A0x78933b935a39556d!2sEstella%20Place!5e0!3m2!1svi!2s!4v1689674751493!5m2!1svi!2s">
+                        <h4>MovieBox Cầu Giấy</h4>
+                        <p>456 Yên Hòa</p>
+                    </div>
+                    <!-- Rạp 3 -->
+                    <div class="cinema-item"
+                        data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.063234978051!2d106.6970425750424!3d10.729783889417833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a9779e568f%3A0x3344d2d480838618!2sSC%20VivoCity!5e0!3m2!1svi!2s!4v1689674797033!5m2!1svi!2s">
+                        <h4>MovieBox Bắc Từ Liêm</h4>
+                        <p>789 Đức Thắng</p>
+                    </div>
+                </div>
+                <div class="cinemas-map">
+                    <iframe id="cinema-location-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.523388155858!2d105.77231507636832!3d21.011733980633323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313453209305f15b%3A0xef45eb492b0d2577!2zQmV0YSBDaW5lbWFzIE3hu7kgxJDDrG5o!5e0!3m2!1svi!2s!4v1750144713555!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="trailer-modal" class="modal-overlay">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h3 id="trailer-modal-title">Trailer Phim</h3>
+                <button class="close-modal-btn">&times;</button>
+            </header>
+            <div class="modal-body">
+                <div class="video-responsive-wrapper">
+                    <iframe id="trailer-iframe" src="" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            //HERO SLIDER
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.hero-slider-dots .dot');
+            if (slides.length > 0 && dots.length > 0) {
+                let currentSlide = 0;
+                let slideInterval;
+
+                function showSlide(index) {
+                    if (slides[currentSlide]) slides[currentSlide].classList.remove('active');
+                    if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+                    currentSlide = index;
+                    if (slides[currentSlide]) slides[currentSlide].classList.add('active');
+                    if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+                }
+
+                function nextSlide() {
+                    const newIndex = (currentSlide + 1) % slides.length;
+                    showSlide(newIndex);
+                }
+
+                function startSlider() {
+                    slideInterval = setInterval(nextSlide, 5000);
+                }
+
+                function stopSlider() {
+                    clearInterval(slideInterval);
+                }
+
+                dots.forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        const index = parseInt(dot.getAttribute('data-index'));
+                        stopSlider();
+                        showSlide(index);
+                        startSlider();
+                    });
+                });
+
+                startSlider();
+            }
+
+            // START OUR CINEMAS INTERACTION
+            const cinemaItems = document.querySelectorAll('.cinema-item');
+            const cinemaMap = document.getElementById('cinema-location-map');
+
+            if (cinemaItems.length > 0 && cinemaMap) {
+                const firstCinema = document.querySelector('.cinema-item.active');
+                if (firstCinema) {
+                    cinemaMap.src = firstCinema.dataset.mapSrc;
+                }
+
+                cinemaItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        cinemaItems.forEach(i => i.classList.remove('active'));
+                        item.classList.add('active');
+                        const newMapSrc = item.dataset.mapSrc;
+                        if (newMapSrc) {
+                            cinemaMap.src = newMapSrc;
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="./js/dist/jquery-3.7.1.min.js"></script>
+    <script src="./js/lib.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/homepage.js"></script>
+</body>
+
+</html>

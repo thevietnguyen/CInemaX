@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tiêu đề sẽ được JS cập nhật -->
+    <title>Tin Tức - MovieBox</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/news.css"> <!-- Tái sử dụng style chung -->
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../libs/fontawesome-free-7.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../css/news-details.css"> <!-- Style riêng cho trang chi tiết -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"> -->
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    
+    <main id="news-details-container">
+
+        <aside class="news-sidebar">
+        <div class="sidebar-widget">
+            <h4 class="widget-title">Chuyên Mục</h4>
+            <ul id="category-list" class="widget-category-list">
+            </ul>
+        </div>
+        <div class="sidebar-widget">
+            <h4 class="widget-title">Bài Viết Mới Nhất</h4>
+            <ul id="recent-posts-list" class="widget-recent-posts">
+    
+            </ul>
+        </div>
+    </aside>
+        <div class="loader-container">
+            <div class="loader"></div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/dist/jquery-3.7.1.min.js"></script>
+    <script src="../js/lib.js"></script>
+    <script src="../js/news-details.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

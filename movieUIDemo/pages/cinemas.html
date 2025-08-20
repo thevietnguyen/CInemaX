@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Rạp - MovieBox</title>
+    <!-- CSS Chung -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- CSS Riêng của trang Rạp Phim -->
+    <link rel="stylesheet" href="../css/cinemas.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../libs/fontawesome-free-7.0.0-web/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<main>
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('../assets/image/tix-banner-brighter.png');">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="index.html" class="breadcrumb-link">Trang Chủ</a>
+                <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                <span class="breadcrumb-current">Rạp Phim</span>
+            </div>
+            <h1>Hệ Thống Rạp MovieBox</h1>
+            <p>Trải nghiệm điện ảnh đỉnh cao tại các cụm rạp hiện đại nhất</p>
+        </div>
+    </section>
+
+    <!-- Main Cinemas Section -->
+    <section class="cinemas-page-section container">
+        <!-- Filter Bar -->
+        <div class="cinemas-filter-bar">
+            <label for="filter-city">Chọn khu vực:</label>
+            <select id="filter-city">
+                <option value="all">Tất Cả</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="hcm">TP. Hồ Chí Minh</option>
+            </select>
+        </div>
+
+        <!-- Cinemas List -->
+        <div class="cinemas-list-grid">
+            <!-- Cinema Card 1 (Hà Nội) -->
+            <div class="cinema-card" data-city="hanoi">
+                <div class="cinema-card-image">
+                    <img src="../assets/image/logo.png" alt="MovieBox Hai Bà Trưng">
+                </div>
+                <div class="cinema-card-content">
+                    <h3 class="cinema-name">MovieBox Hai Bà Trưng</h3>
+                    <p class="cinema-address"><i class="fas fa-map-marker-alt"></i> 123 Minh Khai, Hai Bà Trưng, Hà Nội</p>
+                    <div class="cinema-tags">
+                        <span class="tag-feature">IMAX</span>
+                        <span class="tag-feature">4K</span>
+                        <span class="tag-feature">Ghế Đôi</span>
+                    </div>
+                    <div class="cinema-actions">
+                        <a href="schedules.html?cinema=hbt" class="btn btn-primary">Xem Lịch Chiếu</a>
+                        <a href="#" class="map-link">Xem Bản Đồ <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cinema Card 2 (Hà Nội) -->
+            <div class="cinema-card" data-city="hanoi">
+                <div class="cinema-card-image">
+                    <img src="../assets/image/logo.png" alt="MovieBox Cầu Giấy">
+                </div>
+                <div class="cinema-card-content">
+                    <h3 class="cinema-name">MovieBox Cầu Giấy</h3>
+                    <p class="cinema-address"><i class="fas fa-map-marker-alt"></i> 456 Yên Hòa, Cầu Giấy, Hà Nội</p>
+                    <div class="cinema-tags">
+                        <span class="tag-feature">Dolby Atmos</span>
+                        <span class="tag-feature">Ghế Đôi</span>
+                    </div>
+                    <div class="cinema-actions">
+                        <a href="schedules.html?cinema=cg" class="btn btn-primary">Xem Lịch Chiếu</a>
+                        <a href="#" class="map-link">Xem Bản Đồ <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cinema Card 3 (TP.HCM) -->
+            <div class="cinema-card" data-city="hcm">
+                <div class="cinema-card-image">
+                    <img src="../assets/image/logo.png" alt="MovieBox Bắc Từ Liêm">
+                </div>
+                <div class="cinema-card-content">
+                    <h3 class="cinema-name">MovieBox Quận 1</h3>
+                    <p class="cinema-address"><i class="fas fa-map-marker-alt"></i> 789 Đồng Khởi, Quận 1, TP.HCM</p>
+                    <div class="cinema-tags">
+                        <span class="tag-feature">4K</span>
+                    </div>
+                    <div class="cinema-actions">
+                        <a href="schedules.html?cinema=q1" class="btn btn-primary">Xem Lịch Chiếu</a>
+                        <a href="#" class="map-link">Xem Bản Đồ <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Cinema Card 4 (TP.HCM) -->
+            <div class="cinema-card" data-city="hcm">
+                <div class="cinema-card-image">
+                    <img src="../assets/image/logo.png" alt="MovieBox Crescent Mall">
+                </div>
+                <div class="cinema-card-content">
+                    <h3 class="cinema-name">MovieBox Crescent Mall</h3>
+                    <p class="cinema-address"><i class="fas fa-map-marker-alt"></i> 101 Tôn Dật Tiên, Quận 7, TP.HCM</p>
+                    <div class="cinema-tags">
+                        <span class="tag-feature">4DX</span>
+                        <span class="tag-feature">Ghế Đôi</span>
+                    </div>
+                    <div class="cinema-actions">
+                        <a href="schedules.html?cinema=cm" class="btn btn-primary">Xem Lịch Chiếu</a>
+                        <a href="#" class="map-link">Xem Bản Đồ <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<!-- Scripts -->
+<script>
+    // Tải Header và Footer
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.textContent.trim() === 'Rạp Phim') {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+
+<script>
+    // Logic Lọc Rạp Phim
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterCity = document.getElementById('filter-city');
+        const cinemaCards = document.querySelectorAll('.cinema-card');
+
+        filterCity.addEventListener('change', () => {
+            const selectedCity = filterCity.value;
+
+            cinemaCards.forEach(card => {
+                const cardCity = card.dataset.city;
+
+                if (selectedCity === 'all' || selectedCity === cardCity) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

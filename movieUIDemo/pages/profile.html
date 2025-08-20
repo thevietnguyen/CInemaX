@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Tài Khoản - MovieBox</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css"> <!-- File CSS riêng cho khu vực tài khoản -->
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../libs/fontawesome-free-7.0.0-web/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"> -->
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="account-page">
+        <div class="container">
+            <div class="account-layout">
+                <!-- Sidebar Menu cho khu vực tài khoản -->
+                <aside class="account-sidebar">
+                    <div class="user-avatar-section">
+                        <img src="https://i.pravatar.cc/100" alt="User Avatar" id="user-avatar-img">
+                        <h4 id="user-fullname"></h4>
+                        <p id="user-email"></p>
+                    </div>
+                    <nav class="account-nav">
+                        <ul>
+                            <li>
+                                <a href="#" data-target="profile-content" class="account-tab active">
+                                    <i class="fas fa-user-edit"></i><span>Thông tin tài khoản</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-target="history-content" class="account-tab">
+                                    <i class="fas fa-history"></i><span>Lịch sử đặt vé</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-target="password-content" class="account-tab">
+                                    <i class="fas fa-key"></i><span>Đổi mật khẩu</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" id="account-logout-btn"><i class="fas fa-sign-out-alt"></i><span>Đăng
+                                        xuất</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <!-- Nội dung chính -->
+                <section class="account-main-content">
+                    <!-- 1. Tab Thông tin cá nhân (hiển thị mặc định) -->
+                    <div id="profile-content" class="content-block active">
+                        <h3 class="content-title">Thông tin cá nhân</h3>
+                        <form id="profile-form" class="account-form">
+                            <div class="form-group">
+                                <label for="profile-fullname">Họ và tên</label>
+                                <input type="text" id="profile-fullname" name="fullname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-email">Email</label>
+                                <input type="email" id="profile-email" name="email" disabled>
+                                <small>Bạn không thể thay đổi địa chỉ email.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profile-phone">Số điện thoại</label>
+                                <input type="tel" id="profile-phone" name="phone">
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- 2. Tab Đổi mật khẩu (ẩn mặc định) -->
+                    <div id="password-content" class="content-block" style="display: none;">
+                        <h3 class="content-title">Đổi mật khẩu</h3>
+                        <form id="change-password-form" class="account-form">
+                            <div class="form-group">
+                                <label for="old-password">Mật khẩu cũ</label>
+                                <input type="password" id="old-password" name="oldPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">Mật khẩu mới</label>
+                                <input type="password" id="new-password" name="newPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Xác nhận mật khẩu mới</label>
+                                <input type="password" id="confirm-password" name="confirmPassword" required>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Lưu mật khẩu mới</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- 3. Tab Lịch sử đặt vé (ẩn mặc định) -->
+                    <div id="history-content" class="content-block" style="display: none;">
+                        <h3 class="content-title">Lịch sử đặt vé</h3>
+                        <p>Chức năng này đang được phát triển.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/dist/jquery-3.7.1.min.js"></script>
+    <script src="../js/lib.js"></script>
+    <script src="../js/main.js"></script> 
+    <script src="../js/profile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1429 @@
+:root {
+    --primary-color: #E71F66;
+    --primary-color-darker: #c21855;
+    --dark-bg: #0D0D0D;
+    --card-bg: #1A1A1A;
+    --text-light: #FFFFFF;
+    --text-medium: #B3B3B3;
+    --text-dark: #333333;
+    --font-family: 'Oswald', 'Be Vietnam Pro', sans-serif;
+    --container-width: 1200px;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-darker);
+    border-color: var(--primary-color-darker);
+}
+
+.btn-secondary {
+    background-color: rgba(26, 26, 26, 0.7);
+    color: var(--text-light);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(40, 40, 40, 0.9);
+}
+
+.btn-dark {
+    background-color: #333;
+    color: var(--text-light);
+    padding: 8px 16px;
+}
+
+.btn-dark:hover {
+    background-color: #444;
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+/* =================================
+   HEADER (PHẦN NÀY ĐÃ ĐƯỢC SỬA)
+   ================================= */
+header {
+    background-color: var(--card-bg);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+header nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif; /* Giữ font Oswald cho logo */
+}
+
+.logo i {
+    font-size: 1.7rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-medium);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--text-light);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* --- Search Bar (dạng viên thuốc) --- */
+.search-bar {
+    position: relative;
+}
+.search-bar input {
+    background-color: #2e2e2e;
+    border: 1px solid #444;
+    border-radius: 50px;
+    padding: 10px 20px 10px 45px;
+    color: var(--text-light);
+    font-family: var(--font-family);
+    width: 250px;
+    transition: all 0.3s ease;
+}
+.search-bar input:focus {
+    background-color: #3a3a3a;
+    border-color: var(--primary-color);
+}
+.search-bar input::placeholder {
+    color: var(--text-medium);
+}
+.search-bar .fa-search {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-medium);
+}
+
+
+/* --- Auth Actions --- */
+.auth-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Icon người dùng khi chưa đăng nhập */
+.user-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-medium);
+    font-size: 1.2rem;
+    padding: 8px;
+    transition: color 0.3s ease;
+}
+.user-icon-link:hover {
+    color: var(--text-light);
+}
+
+/* Nút Đăng Nhập (dạng viên thuốc) */
+.sign-in-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    border-radius: 50px;
+}
+
+/* Link thông tin người dùng khi đã đăng nhập */
+.user-profile-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-medium);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.user-profile-link:hover {
+    color: var(--text-light);
+}
+.user-profile-link i {
+    font-size: 1.5rem;
+}
+
+/* Nút Đăng Xuất */
+.sign-out-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+.sign-out-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+
+/* =================================
+   PHẦN CÒN LẠI GIỮ NGUYÊN
+   ================================= */
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    min-height: 500px;
+    position: relative;
+    color: var(--text-light);
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0.1) 70%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--text-light);
+    max-width: 600px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.hero-slide.active .hero-content {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+.hero-buttons-fixed {
+    position: absolute;
+    bottom: 50px;
+    left: 120px;
+    z-index: 10;
+    display: flex;
+    gap: 15px;
+}
+
+.hero-buttons-fixed .btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+}
+
+.hero-slider-dots {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10;
+}
+
+.hero-slider-dots span {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-slider-dots span.active {
+    background-color: var(--primary-color);
+    transform: scale(1.4);
+}
+
+
+section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+main > section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    margin-bottom: 40px !important;
+}
+
+main > section:last-of-type {
+    margin-bottom: 0;
+}
+.hero {
+    padding: 0;
+    margin-bottom: 0;
+}
+/* END OF FIX */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.view-all {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Now Showing Section - Flipping Cards */
+.movie-grid-now-showing {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.movie-card-vertical {
+    background-color: transparent;
+    width: 100%;
+    height: 350px;
+    perspective: 1000px;
+    color: var(--text-light);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.movie-card-vertical:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-front .movie-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px 10px 10px 10px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.card-back {
+    background-color: var(--card-bg);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-back h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-back p {
+    font-size: 0.85rem;
+    color: var(--text-medium);
+    margin-bottom: 20px;
+}
+
+.card-back .card-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+.card-back .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 8px 10px;
+}
+
+/* Coming Soon Section */
+.movie-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 5) - 16px);
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--card-bg);
+}
+.movie-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+.movie-carousel::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+.movie-carousel::-webkit-scrollbar-track {
+    background-color: var(--card-bg);
+}
+
+.movie-card-coming-soon {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.movie-card-coming-soon:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card-coming-soon img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.movie-card-coming-soon .card-content {
+    padding: 15px;
+}
+.movie-card-coming-soon h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.movie-card-coming-soon p {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+.coming-soon-poster-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius) var(--border-radius) 0 0; /* Bo góc trên */
+}
+
+/* Tái sử dụng style của lớp phủ từ các thẻ phim khác */
+.coming-soon-poster-link .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.coming-soon-poster-link:hover .card-overlay {
+    opacity: 1;
+}
+
+.coming-soon-poster-link .card-overlay i {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Thêm hiệu ứng zoom cho ảnh */
+.coming-soon-poster-link img {
+    transition: transform 0.4s ease;
+}
+.coming-soon-poster-link:hover img {
+    transform: scale(1.05);
+}
+
+/* Đảm bảo link trong tiêu đề cũng đẹp */
+.movie-card-coming-soon .card-content h4 a {
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+.movie-card-coming-soon .card-content h4 a:hover {
+    color: var(--primary-color);
+}
+
+
+/* Promotion Banner Section (Image-focused) */
+.promotion-banner {
+    background: radial-gradient(circle at 20% 50%, rgba(231, 31, 102, 0.1), var(--dark-bg) 40%);
+    border-radius: var(--border-radius);
+    padding: 40px 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.promo-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.promo-content {
+    text-align: left;
+}
+
+.promo-content h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.promo-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.promo-content .btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+}
+
+.promo-image {
+    width: 100%;
+}
+
+.promo-image img {
+    border-radius: var(--border-radius);
+    transition: transform 0.4s ease-out;
+    width: 100%;
+    object-fit: cover;
+}
+
+.promo-layout:hover .promo-image img {
+    transform: scale(1.05);
+}
+
+
+/* Movie News Section */
+.movie-grid-news {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+.movie-card-horizontal.news-card-hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: -25px;
+    border: none;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.movie-card-horizontal.news-card-hidden.show {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    pointer-events: auto;
+}
+
+.movie-card-horizontal {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    height: 250px;
+}
+
+.movie-card-horizontal img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+.movie-card-horizontal .movie-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.movie-card-horizontal .movie-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.movie-card-horizontal .movie-info p {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.movie-card-horizontal .movie-info .btn-dark {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+
+/* Our Cinemas (Enhanced) Section */
+.our-cinemas-enhanced {}
+.cinemas-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+}
+.cinemas-list .cinema-item {
+    padding: 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cinemas-list .cinema-item:hover {
+    background-color: #2a2a2a;
+}
+.cinemas-list .cinema-item.active {
+    background-color: var(--primary-color-darker);
+}
+.cinema-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+.cinema-item p {
+    color: var(--text-medium);
+    margin-bottom: 10px;
+}
+.cinema-item .tags {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* Our Cinemas - Enhanced Map Styling */
+.cinemas-map {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background-color: #222;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.cinemas-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(100%) invert(90%) contrast(80%);
+    transition: filter 0.3s ease;
+}
+.cinemas-layout:hover .cinemas-map iframe {
+    filter: grayscale(80%) invert(90%) contrast(100%);
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--card-bg);
+    padding: 50px 0 20px;
+    margin-top: 50px;
+    color: var(--text-medium);
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.footer-column.about .logo {
+    margin-bottom: 15px;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: var(--text-medium);
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons a i {
+    font-size: 1.3rem;
+    color: var(--text-medium);
+    transition: color 0.3s ease;
+}
+.social-icons a:hover i {
+    color: var(--primary-color);
+}
+
+.app-store-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #252525;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    color: var(--text-light);
+    transition: background-color 0.3s ease;
+}
+.app-store-btn:hover {
+    background-color: #333;
+}
+.app-store-btn i { font-size: 1.8rem; }
+.app-store-btn div { display: flex; flex-direction: column; line-height: 1.2; }
+.app-store-btn span { font-size: 0.75rem; color: var(--text-medium); }
+.app-store-btn strong { font-size: 0.9rem; }
+
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* login */
+/* .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-overlay.show {
+    opacity: 1;
+    visibility: visible;
+} */
+
+.popup-content {
+    background-color: var(--card-bg);
+    padding: 30px 40px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.popup-overlay.show .popup-content {
+    transform: scale(1);
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--text-medium);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+    color: var(--text-light);
+}
+
+.popup-content h2 {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-medium);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+    font-size: 1rem;
+    font-family: var(--font-family);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-options {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+.forgot-password:hover {
+    color: var(--primary-color);
+}
+
+.btn-full-width {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+.signup-link a {
+    font-weight: 600;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .movie-grid-now-showing {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media (max-width: 992px) {
+    .hero-content {
+        max-width: 70%;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .nav-links {
+        display: none;
+    }
+    .search-bar input {
+        width: 150px;
+    }
+    .movie-grid-now-showing {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .movie-carousel {
+        grid-auto-columns: calc((100% / 3) - 14px);
+    }
+    .cinemas-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .hero .container {
+        padding: 80px 20px;
+    }
+    .hero-slide {
+        padding: 0 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero::before {
+        background: rgba(0,0,0,0.7);
+    }
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero-buttons-fixed {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        width: 90%;
+        justify-content: center;
+    }
+    .hero-slider-dots {
+        display: none;
+    }
+    .movie-grid-now-showing {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .movie-card-horizontal {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+    .movie-card-horizontal img {
+        margin-bottom: 15px;
+    }
+
+    .movie-card-horizontal .movie-info .btn-dark {
+        align-self: center;
+    }
+
+    .promo-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .promo-content {
+        text-align: center;
+    }
+
+    .promo-image {
+        margin: 0 auto 15px auto;
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-column.about .logo,
+    .footer-column h4 {
+        text-align: center;
+    }
+    .social-icons, .app-store-btn {
+        justify-content: center;
+    }
+    .app-store-btn {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 200px;
+    }
+    .movie-carousel {
+        grid-auto-columns: calc((100% / 2) - 10px);
+    }
+    .promo-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .hero-buttons-fixed {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .hero-buttons-fixed .btn {
+        width: 80%;
+        justify-content: center;
+    }
+    .nav-actions {
+        gap: 10px;
+    }
+    .search-bar {
+        display: none;
+    }
+    .sign-in-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    .movie-grid-now-showing {
+        grid-template-columns: 1fr;
+    }
+    .movie-carousel {
+        grid-auto-columns: calc(100% - 40px);
+    }
+}
+
+
+/* Trong file style.css */
+
+/* =================================
+   USER DROPDOWN MENU STYLES
+   ================================= */
+
+/* Sửa lại user-profile-link thành button */
+#user-menu-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-medium);
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+#user-menu-trigger:hover {
+    color: var(--text-light);
+}
+
+#user-menu-trigger i {
+    font-size: 1.5rem;
+}
+
+.dropdown-arrow {
+    font-size: 0.7rem !important; /* Icon mũi tên nhỏ hơn */
+    transition: transform 0.3s ease;
+}
+
+#user-menu-trigger.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* Dropdown Menu */
+.user-menu-dropdown {
+    position: absolute;
+    top: calc(100% + 10px); /* Nằm ngay dưới header, cách 10px */
+    right: 280px;
+    background-color: #1a1a1a; /* Màu nền tối hơn một chút */
+    width: 240px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    z-index: 1100;
+    /* border: 1px solid #333; */
+    padding: 8px;
+    
+    /* Hiệu ứng ẩn/hiện */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.user-menu-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-header {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: var(--text-light);
+    border-radius: 6px; /* Bo tròn item bên trong */
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+}
+
+.dropdown-item i {
+    width: 20px;
+    text-align: center;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background-color: #444;
+    margin: 8px 0;
+}
+
+/* ======================================================= */
+/*             STYLES FOR ALL POPUPS (UNIFIED)             */
+/* ======================================================= */
+
+/* --- 1. Base styles for ALL overlays (login, register, notify) --- */
+.popup-overlay, .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Default hidden state */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    
+    /* Base z-index for popups */
+    z-index: 1000;
+}
+
+/* --- 2. Active state for ALL popups --- */
+/* This works for both .show (login/register) and .active (notify) */
+.popup-overlay.show, .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+/* --- 3. OVERRIDE: Make Notify Popup always on top --- */
+#notify-popup.modal-overlay {
+    z-index: 2000; /* Higher z-index to appear above other popups */
+}
+
+
+/* --- 4. Content box styles (for login, register, notify) --- */
+.popup-content, .modal-content {
+    background-color: var(--card-bg);
+    padding: 30px 40px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 400px; /* Default max-width */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    
+    /* Animation effect */
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+/* Animation when popup becomes active */
+.popup-overlay.show .popup-content, 
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+/* --- 5. Specific styles for Notify Popup content --- */
+.modal-content.notify {
+    max-width: 450px;
+    padding: 25px 30px; /* Điều chỉnh padding */
+    text-align: center; /* Căn giữa nội dung footer */
+}
+
+.modal-content.notify .modal-body {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: left;
+    margin-bottom: 20px; /* Thêm khoảng cách với footer */
+}
+
+/* Thêm khối này để bọc text */
+.notify-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.notify-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+.notify-icon.success { color: #28a745; }
+.notify-icon.error   { color: #dc3545; }
+.notify-icon.warning { color: #ffc107; }
+
+/* Thay đổi selector để khớp với HTML mới */
+.notify-text .modal-title {
+    font-size: 1.5rem; /* Điều chỉnh font size */
+    margin: 0 0 5px 0; /* Reset margin */
+    text-align: left; /* Căn trái tiêu đề */
+    color: var(--text-light);
+}
+
+#notify-message {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--text-medium);
+}
+/* Style cho footer của modal */
+.modal-content.notify .modal-footer {
+    display: flex;
+    justify-content: center; /* Căn giữa nút "Đã hiểu" */
+}
+
+
+/* --- 6. Generic close button (UPDATED) --- */
+.popup-content > .close-popup, 
+.modal-content > button.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-medium);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.popup-content > .close-popup:hover, 
+.modal-content > button.close-modal-btn:hover {
+    color: var(--text-light);
+}
+
+/* Nút "Đã hiểu" sẽ kế thừa từ .btn-primary */
+.modal-footer .btn {
+    width: 30%;
+    justify-content: center;
+    /* Giờ nó sẽ không bị ảnh hưởng bởi position: absolute nữa */
+}
+
+
+/* --- 7. Generic form styles (UPDATED) --- */
+.popup-content h2 { /* Chỉ áp dụng cho login/register */
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; color: var(--text-medium); font-weight: 500; }
+.form-group input { width: 100%; padding: 12px 15px; background-color: #333; border: 1px solid #444; border-radius: var(--border-radius); color: var(--text-light); font-size: 1rem; font-family: var(--font-family); }
+.form-group input:focus { outline: none; border-color: var(--primary-color); }
+.form-options { text-align: right; margin-bottom: 20px; }
+.forgot-password { font-size: 0.9rem; color: var(--text-medium); }
+.forgot-password:hover { color: var(--primary-color); }
+.btn-full-width { width: 100%; justify-content: center; padding: 12px; font-size: 1.1rem; }
+.signup-link { text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--text-medium); }
+.signup-link a { font-weight: 600; }
+
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000; opacity: 0; visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+.modal-overlay.active {
+    opacity: 1; visibility: visible;
+    transition: opacity 0.3s ease;
+}
+.modal-content {
+    background-color: #1a1a1a; border-radius: var(--border-radius);
+    width: 90%; max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9); transition: transform 0.3s ease;
+}
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+.modal-header {
+    padding: 15px 20px; border-bottom: 1px solid #333;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.modal-header h3 { font-size: 1.2rem; color: var(--text-light); }
+.close-modal-btn {
+    background: none; border: none; font-size: 2rem;
+    cursor: pointer; color: var(--text-medium); line-height: 1;
+    transition: color 0.2s;
+}
+.close-modal-btn:hover { color: var(--primary-color); }
+.modal-body { padding: 20px; }
+.video-responsive-wrapper {
+    position: relative; overflow: hidden;
+    width: 100%; aspect-ratio: 16 / 9;
+}
+.video-responsive-wrapper iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; border: 0;
+}

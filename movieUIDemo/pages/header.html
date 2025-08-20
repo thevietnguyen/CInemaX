@@ -1,0 +1,67 @@
+<header>
+  <nav class="container">
+    <a href="/index.html" class="logo">
+      <i class="fas fa-film"></i>
+      <span>MovieBox</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/index.html">Trang Chủ</a></li>
+      <li><a href="../pages/movies.html">Phim</a></li>
+      <li><a href="../pages/schedules.html">Lịch Chiếu</a></li>
+      <li><a href="../pages/cinemas.html">Rạp Phim</a></li>
+      <li><a href="../pages/news.html">Tin Tức</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm phim..." />
+        <i class="fas fa-search"></i>
+      </div>
+
+      <div id="auth-actions-logged-out" class="auth-actions">
+        <a href="#" class="user-icon-link js-open-popup" data-popup-target="#login-popup">
+          <i class="fas fa-user"></i>
+        </a>
+        <button class="btn btn-primary sign-in-btn js-open-popup" data-popup-target="#login-popup"
+          id="login-trigger-btn">
+          Đăng Nhập
+        </button>
+      </div>
+
+      <!-- Trong file header.html -->
+      <div id="auth-actions-logged-in" class="auth-actions" style="display: none">
+        <!-- Nút kích hoạt dropdown -->
+        <button class="user-profile-link" id="user-menu-trigger">
+          <i class="fas fa-user-circle"></i>
+          <span id="header-fullname"></span>
+          <i class="fas fa-chevron-down dropdown-arrow"></i>
+        </button>
+
+        <!-- Menu Dropdown (ẩn mặc định) -->
+        <div class="user-menu-dropdown" id="user-menu-dropdown">
+          <div class="dropdown-header">
+            <strong>Tài khoản của tôi</strong>
+          </div>
+          <a href="../pages/profile.html" class="dropdown-item" id="profile-link">
+            <i class="fas fa-user-edit"></i>
+            <span>Thông tin cá nhân</span>
+          </a>
+          <a href="/account/history.html" class="dropdown-item">
+            <i class="fas fa-history"></i>
+            <span>Lịch sử đặt vé</span>
+          </a>
+          <a href="../pages/profile.html#password-content" class="dropdown-item">
+            <i class="fas fa-key"></i>
+            <span>Đổi mật khẩu</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item" id="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Đăng xuất</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

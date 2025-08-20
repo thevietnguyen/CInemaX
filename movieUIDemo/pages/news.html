@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức Điện Ảnh - MovieBox</title>
+    <!-- CSS Chung -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- CSS Riêng của trang Tin Tức -->
+    <link rel="stylesheet" href="../css/news.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../libs/fontawesome-free-7.0.0-web/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"> -->
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header" style="background-image: url('https://wallpaperaccess.com/full/138837.jpg');">
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs">
+                    <a href="index.html" class="breadcrumb-link">Trang Chủ</a>
+                    <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="breadcrumb-current">Tin Tức</span>
+                </div>
+                <h1>Tin Tức Điện Ảnh</h1>
+                <p>Cập nhật những thông tin nóng hổi nhất từ thế giới cinema</p>
+            </div>
+        </section>
+
+        <section class="news-page-section container">
+    
+            <div class="news-grid-container">
+     
+                <div id="news-grid" class="news-grid">
+    
+                </div>
+           
+                <div id="pagination-container" class="pagination"></div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="news-sidebar">
+          
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Tìm Kiếm</h4>
+                    <form id="news-search-form" class="widget-search-form">
+                        <input type="text" id="news-search-input" placeholder="Nhập từ khóa...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+          
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Chuyên Mục</h4>
+         
+                    <ul id="category-list" class="widget-category-list">
+           
+                    </ul>
+                </div>
+
+              
+                <div class="sidebar-widget">
+                    <h4 class="widget-title">Bài Viết Mới Nhất</h4>
+           
+                    <ul id="recent-posts-list" class="widget-recent-posts">
+                
+                    </ul>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="../js/dist/jquery-3.7.1.min.js"></script>
+    <script src="../js/lib.js"></script>
+    <script src="../js/news.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

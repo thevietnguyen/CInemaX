@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Phim - MovieBox</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/movies.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../libs/fontawesome-free-7.0.0-web/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<main>
+    <section class="page-header" style="background-image: url('../assets/image/tix-banner-brighter.png');">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html" class="breadcrumb-link">Trang Chủ</a>
+                <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                <span class="breadcrumb-current">Phim</span>
+            </div>
+            <h1>Danh Sách Phim</h1>
+            <p>Khám phá thế giới điện ảnh đỉnh cao tại MovieBox</p>
+        </div>
+    </section>
+
+    <section class="movies-page-section container">
+        <div class="movie-filter-tabs">
+            <button class="filter-tab" data-status="NOW_SHOWING">Đang Chiếu</button>
+            <button class="filter-tab" data-status="COMING_SOON">Sắp Chiếu</button>
+        </div>
+        <div id="movie-grid-container" class="movie-grid-fullpage">
+            <div class="loader"></div> 
+        </div>
+        <div id="pagination-container" class="pagination"></div>
+    </section>
+</main>
+<div id="trailer-modal" class="modal-overlay">
+    <div class="modal-content">
+        <header class="modal-header">
+            <h3 id="trailer-modal-title">Trailer Phim</h3>
+            <button class="close-modal-btn">&times;</button>
+        </header>
+        <div class="modal-body">
+            <!-- Khung chứa video đáp ứng theo tỷ lệ 16:9 -->
+            <div class="video-responsive-wrapper">
+                <iframe id="trailer-iframe" 
+                        src="" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="../js/dist/jquery-3.7.1.min.js"></script>
+<script src="../js/lib.js"></script> 
+<script src="../js/movies.js"></script> 
+<script src="../js/main.js"></script> 
+</body>
+</html>

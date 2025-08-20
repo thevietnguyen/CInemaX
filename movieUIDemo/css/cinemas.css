@@ -1,0 +1,178 @@
+/* =================================
+   CINEMAS PAGE STYLES
+   ================================= */
+
+/* Page Header (Tái sử dụng) */
+.page-header {
+    padding: 60px 0;
+    position: relative;
+    text-align: center;
+    color: var(--text-light);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+}
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 13, 13, 0.7);
+    z-index: 1;
+}
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+}
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+.breadcrumb-link { color: var(--text-medium); transition: color 0.3s ease; }
+.breadcrumb-link:hover { color: var(--primary-color); }
+.breadcrumb-separator { color: var(--text-medium); opacity: 0.6; font-size: 0.7rem; }
+.breadcrumb-current { color: var(--text-light); font-weight: 500; }
+
+/* Filter Bar */
+.cinemas-filter-bar {
+    display: flex;
+    justify-content: flex-end; /* Căn lề phải */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.cinemas-filter-bar label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-medium);
+}
+
+.cinemas-filter-bar select {
+    background-color: var(--card-bg);
+    border: 1px solid #444;
+    color: var(--text-light);
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    min-width: 200px;
+}
+
+/* Cinemas List Grid */
+.cinemas-list-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mặc định 1 cột */
+    gap: 30px;
+}
+
+.cinema-card {
+    display: flex;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border: 1px solid #2a2a2a;
+}
+.cinema-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cinema-card-image {
+    flex: 0 0 300px; /* Chiều rộng cố định cho ảnh */
+}
+.cinema-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cinema-card-content {
+    padding: 25px 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cinema-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.cinema-address {
+    color: var(--text-medium);
+    margin-bottom: 20px;
+}
+.cinema-address i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.cinema-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.tag-feature {
+    background-color: #333;
+    border: 1px solid #444;
+    color: var(--text-medium);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.cinema-actions {
+    margin-top: auto; /* Đẩy các nút xuống dưới cùng */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.map-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.map-link:hover {
+    color: var(--text-light);
+}
+.map-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+.map-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cinema-card {
+        flex-direction: column;
+    }
+    .cinema-card-image {
+        flex-basis: 200px; /* Chiều cao cố định cho ảnh trên mobile */
+    }
+    .cinemas-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

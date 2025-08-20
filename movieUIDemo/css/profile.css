@@ -1,0 +1,210 @@
+/* ===================================================
+   ACCOUNT PAGE STYLES - CSS RIÊNG CHO KHU VỰC TÀI KHOẢN
+   =================================================== */
+
+/* Layout chính của trang tài khoản */
+.account-page main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.account-layout {
+    display: grid;
+    /* Sidebar rộng 280px, nội dung chiếm phần còn lại */
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- Sidebar --- */
+.account-sidebar {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    position: sticky;
+    top: 100px; /* Vị trí dính, cách top 100px để không bị header che */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Phần avatar người dùng */
+.user-avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #333;
+}
+
+#user-avatar-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color);
+}
+
+#user-fullname {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#user-email {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+/* Menu điều hướng trong sidebar */
+.account-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-nav li {
+    margin-bottom: 5px;
+}
+
+.account-nav a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    border-radius: 6px;
+    color: var(--text-medium);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.account-nav a:hover {
+    background-color: #2a2a2a;
+    color: var(--text-light);
+}
+
+.account-nav a.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.account-nav a i {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* --- Khu vực nội dung chính --- */
+.account-content {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.content-block:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.content-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.content-subtitle {
+    color: var(--text-medium);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+/* --- Form trong khu vực tài khoản --- */
+.account-form .form-group {
+    margin-bottom: 25px;
+}
+
+/* Style cho input bị vô hiệu hóa */
+.account-form .form-group input:disabled {
+    background-color: #2a2a2a;
+    color: var(--text-medium);
+    cursor: not-allowed;
+    border-color: #333;
+}
+.account-form .form-group input:disabled:hover {
+    border-color: #333; /* Ngăn không cho đổi màu border khi hover */
+}
+
+/* Ghi chú nhỏ dưới input */
+.account-form .form-group small {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Khu vực chứa nút bấm */
+.account-form .form-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: flex-end; /* Đưa nút về phía bên phải */
+}
+
+
+.account-page .content-block {
+    max-width: 650px; /* Chiều rộng tối đa của cả khối */
+    margin: 0 auto;   /* Căn giữa cả khối ra giữa trang */
+}
+
+/* 2. Căn giữa nút bấm "Lưu thay đổi" */
+.account-form .form-actions {
+    margin-top: 2rem;
+}
+
+
+/* =================================
+   RESPONSIVE CHO TRANG TÀI KHOẢN
+   ================================= */
+
+/* Cho tablet và các thiết bị nhỏ hơn */
+@media (max-width: 992px) {
+    .account-layout {
+        grid-template-columns: 240px 1fr; /* Thu nhỏ sidebar một chút */
+        gap: 25px;
+    }
+}
+
+/* Cho điện thoại di động */
+@media (max-width: 768px) {
+    .account-layout {
+        grid-template-columns: 1fr; /* Chuyển thành 1 cột, sidebar nằm trên */
+        gap: 30px;
+    }
+
+    .account-sidebar {
+        position: static; /* Bỏ dính sidebar */
+    }
+
+    .account-content {
+        padding: 25px;
+    }
+
+    .content-title {
+        font-size: 1.5rem;
+    }
+
+    .account-form .form-actions {
+        justify-content: flex-start; /* Nút bấm về lại bên trái */
+    }
+    .account-form .form-actions .btn {
+        width: 100%; /* Nút bấm chiếm toàn bộ chiều rộng */
+        justify-content: center;
+    }
+}

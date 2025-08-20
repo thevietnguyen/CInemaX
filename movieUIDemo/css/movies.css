@@ -1,0 +1,352 @@
+/* =================================
+   MOVIES PAGE STYLES
+   ================================= */
+
+/* Page Header Banner */
+.page-header {
+    padding: 60px 0;
+    position: relative;
+    text-align: center;
+    color: var(--text-light);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 13, 13, 0.7); /* Dark overlay */
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.breadcrumb-link {
+    color: var(--text-medium);
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb-separator {
+    color: var(--text-medium);
+    opacity: 0.6;
+    font-size: 0.7rem; /* Làm cho icon mũi tên nhỏ hơn một chút */
+}
+
+.breadcrumb-current {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+
+/* Filter Tabs */
+.movie-filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-tab {
+    background-color: var(--card-bg);
+    color: var(--text-medium);
+    border: 1px solid #333;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 50px; /* Bo tròn để tạo hình viên thuốc */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-tab:hover {
+    background-color: #2a2a2a;
+    color: var(--text-light);
+}
+
+.filter-tab.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+
+/* Full Page Movie Grid (Static Cards) */
+.movie-grid-fullpage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Giảm min-width một chút */
+    gap: 30px;
+}
+
+/* --- Movie Card Nâng Cấp --- */
+.movie-card-static {
+    background-color: var(--card-bg); /* Thêm nền cho thẻ */
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex; /* Bật Flexbox để kiểm soát layout dọc */
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Thêm shadow cho chiều sâu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+.movie-card-static:hover {
+    transform: translateY(-8px); /* Nhấc thẻ lên khi hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-poster-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-poster-link img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 2 / 3; /* QUAN TRỌNG: Giữ tỷ lệ vàng cho poster */
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.movie-card-static:hover .card-poster-link img {
+    transform: scale(1.05); /* Giữ lại hiệu ứng zoom ảnh */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%); /* Gradient tinh tế */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card-static:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay i {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.movie-card-static:hover .card-overlay i {
+    transform: scale(1);
+}
+
+
+/* --- Info Section Nâng Cấp --- */
+.card-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Quan trọng: Cho phép phần info co giãn lấp đầy thẻ */
+}
+
+.card-info .card-title {
+    font-size: 1.15rem; /* Tăng nhẹ size chữ */
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    min-height: 48px; /* Đảm bảo chiều cao cho 2 dòng */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-info .card-title a {
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+
+.card-info .card-title a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Style mới cho Genres --- */
+.card-genres {
+    font-size: 0.8rem;
+    color: var(--text-medium);
+    margin-bottom: 15px;
+    line-height: 1.5;
+    /* Giới hạn thể loại trong 1 dòng */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-details {
+    margin-top: auto; /* QUAN TRỌNG: Đẩy phần này xuống đáy thẻ */
+    padding-top: 10px; /* Thêm khoảng cách với nội dung phía trên */
+    min-height: auto; /* Bỏ min-height cũ */
+}
+
+.release-date {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+.page-link {
+    color: var(--text-medium);
+    background-color: var(--card-bg);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.page-link:hover {
+    background-color: #2a2a2a;
+    color: var(--text-light);
+}
+
+.page-link.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    cursor: default;
+}
+
+.page-link.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Nội dung của modal */
+.modal-content {
+    background-color: #1a1a1a;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+/* Header của modal */
+.modal-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-medium);
+    line-height: 1;
+    transition: color 0.2s;
+}
+.close-modal-btn:hover {
+    color: var(--primary-color);
+}
+
+/* Body của modal */
+.modal-body {
+    padding: 20px;
+}
+
+/* Khung chứa video đáp ứng */
+.video-responsive-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Giữ tỷ lệ 16:9 */
+}
+
+.video-responsive-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Thêm con trỏ cho overlay của thẻ phim */
+.card-poster-link .card-overlay {
+    cursor: pointer;
+}

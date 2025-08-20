@@ -1,0 +1,134 @@
+<!-- Login Popup -->
+<div id="login-popup" class="popup-overlay">
+  <div class="popup-content">
+    <button class="close-popup" aria-label="Đóng">×</button>
+    <h2>Đăng Nhập</h2>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Nhập email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+      </div>
+      <div class="form-options">
+        <a href="#" class="forgot-password">Quên mật khẩu?</a>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full-width">Đăng Nhập</button>
+      <p class="signup-link">Chưa có tài khoản? <a href="#" id="switch-to-register">Đăng ký ngay</a></p>
+    </form>
+  </div>
+</div>
+
+<!-- Register Popup -->
+<div id="register-popup" class="popup-overlay">
+  <div class="popup-content">
+    <button class="close-popup" aria-label="Đóng">×</button>
+    <h2>Đăng Ký</h2>
+    <form id="register-form">
+      <div class="form-group">
+        <label for="reg-fullname">Họ và tên</label>
+        <input type="text" id="reg-fullname" name="fullname" placeholder="Nhập họ và tên" required>
+      </div>
+      <div class="form-group">
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" name="email" placeholder="Nhập email của bạn" required>
+      </div>
+      <div class="form-group">
+        <label for="req-phone-number">Số điện thoại</label>
+        <input type="tel" id="req-phone-number" name="phoneNumber" placeholder="Nhập số điện thoại" required>
+      </div>
+      <div class="form-group">
+        <label for="reg-password">Mật khẩu</label>
+        <input type="password" id="reg-password" name="password" placeholder="Tạo mật khẩu" required>
+      </div>
+      <div class="form-group">
+        <label for="reg-confirm-password">Xác nhận mật khẩu</label>
+        <input type="password" id="reg-confirm-password" name="confirm-password" placeholder="Nhập lại mật khẩu"
+          required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full-width">Đăng Ký</button>
+      <p class="signup-link">Đã có tài khoản? <a href="#" id="switch-to-login">Đăng nhập ngay</a></p>
+    </form>
+  </div>
+</div>
+
+
+<footer>
+  <div class="container">
+    <div class="footer-columns">
+      <div class="footer-column about">
+        <a href="#" class="logo">MovieBox</a>
+        <p>Trải nghiệm điện ảnh đỉnh cao với hệ thống rạp chiếu phim hiện đại nhất.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Phim</h4>
+        <ul>
+          <!-- Sửa các dòng này -->
+          <li><a href="movies.html?status=now-showing">Phim Đang Chiếu</a></li>
+          <li><a href="movies.html?status=coming-soon">Phim Sắp Chiếu</a></li>
+          <li><a href="schedules.html">Suất Chiếu Đặc Biệt</a></li> <!-- Trỏ đến lịch chiếu chung -->
+          <li><a href="#">Vé Bán Trước</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Hỗ Trợ</h4>
+        <ul>
+          <li><a href="#">Về Chúng Tôi</a></li>
+          <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+          <li><a href="#">Điều Khoản Sử Dụng</a></li>
+          <li><a href="#">Chính Sách Bảo Mật</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Tải Ứng Dụng</h4>
+        <p>Đặt vé nhanh hơn với ứng dụng MovieBox.</p>
+        <a href="#" class="app-store-btn">
+          <i class="fab fa-apple"></i>
+          <div>
+            <span>Tải về trên</span>
+            <strong>App Store</strong>
+          </div>
+        </a>
+        <a href="#" class="app-store-btn">
+          <i class="fab fa-google-play"></i>
+          <div>
+            <span>Có trên</span>
+            <strong>Google Play</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 MovieBox. Mọi quyền được bảo lưu.
+    </div>
+  </div>
+</footer>
+
+
+<div id="notify-popup" class="modal-overlay">
+  <div class="modal-content notify">
+    <!-- Nút đóng được dời ra ngoài để không xung đột -->
+    <button class="close-modal-btn">×</button> 
+    
+    <div class="modal-body">
+      <div class="notify-icon">
+        <!-- Icon sẽ được thêm bằng JavaScript -->
+      </div>
+      <div class="notify-text">
+        <h3 class="modal-title" id="notify-title">Thông báo</h3>
+        <p id="notify-message">Nội dung thông báo ở đây.</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary close-modal-btn">Xác nhận</button>
+    </div>
+  </div>
+</div>
